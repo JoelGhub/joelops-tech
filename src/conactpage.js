@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Form, Input, TextArea, Button } from './formcomponent';
 
 const ContactContainer = styled.div`
-  width: 100%;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@ const ContactText = styled.p`
 const ContactPage = () => (
   <ContactContainer>
     <ContactTitle>Contacto</ContactTitle>
-    <ContactText>Si tienes alguna pregunta, no dudes en contactarnos.</ContactText>
+    <ContactText>Si tienes alguna pregunta, no dudes en contactarme.</ContactText>
     <Form action="https://formspree.io/f/mpzgzewz" method="POST">
     <Input type="text" name="name" placeholder="Tu nombre" required />
     <Input type="email" name="_replyto" placeholder="Tu correo electrónico" required />

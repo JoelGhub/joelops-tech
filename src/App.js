@@ -7,7 +7,7 @@ import HomePage from './homepage';
 import ConstructionPage from './constructionpage';
 import ContactPage from './conactpage';
 import Footer from './footer'; 
-
+import Stack from './stack'; 
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ConstructionPage />} />
             <Route path="/contact" element={<ContactPage  />} />
-            <Route path="/about" element={<ConstructionPage />} />
+            <Route path="/about" element={<Stack />} />
           </Routes>
         </header>
         <Footer /> 
