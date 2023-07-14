@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 import './App.css';
 import NavBar from './navbar'; 
 import HomePage from './homepage';
@@ -8,6 +8,10 @@ import ConstructionPage from './constructionpage';
 import ContactPage from './conactpage';
 import Footer from './footer'; 
 import Stack from './stack'; 
+import Blog from './blog'; 
+
+import { blogEntries } from './blogpage'; // Importa el arreglo de entradas del blog
+import BlogDetail from './blogdetail'; // Importa el componente BlogDetail
 
 
 function App() {
@@ -21,6 +25,8 @@ function App() {
             <Route path="/services" element={<ConstructionPage />} />
             <Route path="/contact" element={<ContactPage  />} />
             <Route path="/about" element={<Stack />} />
+            <Route path="/blog" element={<Blog blogs={blogEntries} />} /> 
+            <Route path="/blog/:id" element={<BlogDetail />} /> 
           </Routes>
         </header>
         <Footer /> 

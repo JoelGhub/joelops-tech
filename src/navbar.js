@@ -36,6 +36,7 @@ function NavBar() {
         <NavLink to="/services" activeClassName="active">Servicios</NavLink>
         <NavLink to="/contact" activeClassName="active">Contacto</NavLink>
         <NavLink to="/about" activeClassName="active">Sobre mí</NavLink>
+        <NavLink to="/blog" activeClassName="active">Blog</NavLink>
       </Menu>
     </Navigation>
   );
