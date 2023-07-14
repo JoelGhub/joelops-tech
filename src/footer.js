@@ -33,7 +33,7 @@ const FooterLinks = styled.div`
 function Footer() {
   return (
     <FooterContainer>
-      <FooterText>© 2023 CloudServices. Todos los derechos reservados.</FooterText>
+      <FooterText>© 2023 JoelOpsTech. Todos los derechos reservados.</FooterText>
       <FooterLinks>
         <a href="/">Términos de Servicio</a>
         <a href="/">Política de Privacidad</a>
