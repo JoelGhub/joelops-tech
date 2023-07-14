@@ -22,7 +22,7 @@ const LogoContainer = styled.div`
 `;
 
 const Logo = styled.div`
-  font-size: 2em;
+  font-size: 1em;
   color: #ccd6f6;
 `;
 
@@ -34,6 +34,7 @@ const Menu = styled.div`
     align-items: flex-start;
     margin-top: 1em;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
+    min-height: 200px; /* Ajusta el valor según tus necesidades */
   }
 
   a {

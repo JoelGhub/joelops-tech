@@ -16,7 +16,8 @@ const rotation = keyframes`
 // Define un componente de estilo para tu página principal
 const HomePageContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0em 1em; /* Ajusta el valor del padding-top según tus necesidades */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,13 +33,21 @@ const ServicesContainer = styled.div`
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   margin-top: 50px;
+  @media (max-width: 768px) { /* Ajusta el valor del ancho según tus necesidades */
+    grid-template-columns: 1fr; /* Establece una sola columna */
+    grid-template-rows: repeat(6, 1fr); /* Ajusta el número de filas según tus necesidades */
+  }
 `;
 
 // Define un componente de estilo para tu título
 const Title = styled.h1`
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom:50px;
+  margin-bottom: 50px;
+  margin-top: 80px; 
+  @media (max-width: 768px) { /* Ajusta el valor del ancho según tus necesidades */
+        margin-top:1000px;
+  }
 `;
 const TextTitle = styled.p`
   color: #8c8c94;
