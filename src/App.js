@@ -10,6 +10,7 @@ import ContactPage from './conactpage';
 import Footer from './footer'; 
 import Stack from './stack'; 
 import Blog from './blog'; 
+import Project from './project'; 
 
 import { blogEntries } from './blogpage'; // Importa el arreglo de entradas del blog
 import BlogDetail from './blogdetail'; // Importa el componente BlogDetail
@@ -28,6 +29,7 @@ function App() {
             <Route path="/about" element={<Stack />} />
             <Route path="/blog" element={<Blog blogs={blogEntries} />} /> 
             <Route path="/blog/:id" element={<BlogDetail />} /> 
+            <Route path="/proyectos" element={<Project />} /> 
           </Routes>
         </header>
         <Footer /> 

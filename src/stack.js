@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaLinux, FaReact, FaPython, FaTerminal, FaDocker } from 'react-icons/fa';
-import { SiRedhat, SiKubernetes, SiAmazonaws, SiMysql } from 'react-icons/si';
+import { SiRedhat, SiKubernetes, SiAmazonaws, SiMysql, SiGoland } from 'react-icons/si';
 
 const AboutContainer = styled.div`
   margin: 40px;
   padding: 40px;
   background-color: #0a192f;
   color: #ccd6f6;
+  min-height: calc(100vh - 600px); /* Ajusta el valor para dejar suficiente espacio para el footer */
 `;
 
 const Title = styled.h2`
@@ -26,7 +27,7 @@ const StackContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Ajusta el espacio entre los íconos */
   margin-top: 40px;
 `;
 
@@ -34,9 +35,9 @@ const TechIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
-  width: 100px;
-  height: 100px;
+  font-size: 40px; /* Ajusta el tamaño de los íconos */
+  width: 120px; /* Ajusta el tamaño de los contenedores de los íconos */
+  height: 120px; /* Ajusta el tamaño de los contenedores de los íconos */
   background-color: ${props => props.color};
   color: #fff;
   border-radius: 8px;
@@ -66,6 +67,7 @@ function Stack() {
         <TechIcon color="#000000"><FaTerminal title="Bash" /></TechIcon>
         <TechIcon color="#2496ED"><FaDocker title="Docker" /></TechIcon>
         <TechIcon color="#00758F"><SiMysql title="SQL" /></TechIcon>
+        <TechIcon color="#00ADD8"><SiGoland title="GO" /></TechIcon>
       </StackContainer>
     </AboutContainer>
   );

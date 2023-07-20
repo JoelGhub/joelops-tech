@@ -12,13 +12,17 @@ const Navigation = styled.nav`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
+    position: relative; /* Agregamos position: relative */
   }
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 1em; /* Agrega un margen a la derecha del logo */
+  margin-right: auto; /* Alineamos el logo a la izquierda y el resto a la derecha */
+  @media (max-width: 768px) {
+    margin-bottom: 1em; /* Agregamos un margen inferior en dispositivos móviles */
+  }
 `;
 
 const Logo = styled.div`
@@ -28,13 +32,14 @@ const Logo = styled.div`
 
 const Menu = styled.div`
   display: flex;
+  align-items: center; /* Alineamos los elementos del menú verticalmente */
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 1em;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
-    min-height: 200px; /* Ajusta el valor según tus necesidades */
+    min-height: 200px;
   }
 
   a {
@@ -53,9 +58,13 @@ const MenuIcon = styled.div`
   font-size: 1.5em;
   color: #ccd6f6;
   cursor: pointer;
-  margin-left: 100%;
+  margin-left: auto;
   @media (max-width: 768px) {
     display: block;
+    position: absolute; /* Agregamos position: absolute */
+    top: 50%; /* Centramos verticalmente */
+    right: 1em; /* Alineamos a la derecha */
+    transform: translateY(-50%); /* Centramos verticalmente */
   }
 `;
 
@@ -84,10 +93,10 @@ function NavBar() {
     <Navigation>
       <LogoContainer>
         <Logo>JoelOpsTech</Logo>
-        <MenuIcon onClick={toggleMenu}>
-          {isMenuOpen ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
-        </MenuIcon>
       </LogoContainer>
+      <MenuIcon onClick={toggleMenu}>
+        {isMenuOpen ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
+      </MenuIcon>
       <Menu isOpen={isMenuOpen}>
         <NavLink exact to="/" activeClassName="active">
           Inicio
@@ -103,6 +112,9 @@ function NavBar() {
         </NavLink>
         <NavLink to="/blog" activeClassName="active">
           Blog
+        </NavLink>
+        <NavLink to="/proyectos" activeClassName="active">
+          Proyectos
         </NavLink>
       </Menu>
     </Navigation>
