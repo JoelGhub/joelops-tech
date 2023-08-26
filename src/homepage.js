@@ -62,7 +62,7 @@ const TextTitle = styled.p`
 function HomePage() {
   return (
     <HomePageContainer>
-      <Title>Tu aliado en servicios de DevOps y alojamiento web.</Title>
+      <Title>Tu aliado en servicios de DevOps y alojamiento web en Girona.</Title>
       <TextTitle>
         Me encargo de la infraestructura para que tú puedas centrarte en lo que mejor sabes hacer.
       </TextTitle>
